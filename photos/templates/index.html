@@ -2,7 +2,28 @@
 
 {% block content %}
 <div class="container">
-    <p>my gallery</p>
+    <div class="row">
+        {% for image in images %}
+        <div class="col-md-4">
+            <!-- Card Wider -->
+            <div class="card card-cascade wider">
+
+                <!-- Card image -->
+                <div class="view view-cascade overlay">
+                    <img class="card-img-top" src="{{image.photo.url}}" height="200px" alt="Card image cap">
+                    <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>{% endfor %}
+        <!-- Card Wider -->
+    </div>
+</div>
+
 </div>
 
 {% endblock %}
