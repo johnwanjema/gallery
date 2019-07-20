@@ -34,6 +34,35 @@ class CategoryTestClass(TestCase):
         categorys = Category.objects.all()
         self.assertTrue(len(categorys) > 0)
 
+class ImageTestClass(TestCase):
+
+    def setUp(self):
+        # Creating a new locatio and saving it
+        self.Nairobi= Location(name = 'Nairobi')
+        self.Nairobi.save_location()
+
+        # Creating a new category and saving it
+        self.Camera= Category(name = 'Camera')
+        self.Camera.save_category()
+
+        self.new_image= Image(name = 'Test image',photo = '1.jpg',description = 'test',catgory = self.Nairobi, location = self.Nairobi)
+        self.new_image.save_image()
+
+    def get_allImages(self):
+        self.new_image.save_image()
+        images = Image.get_allImages()
+        self.assertTrue(len(images) > 0)
+
+
+
+
+    def tearDown(self):
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+        Image.objects.all().delete()
+
+
+
 
 
 
