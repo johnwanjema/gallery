@@ -6,6 +6,15 @@ This a personal gallery application that displays my photos for others to see.
 
 ## Created by John Wanjema 20/6/2019
 
+## BDD
+
+| Behaviour         | Input            | Output                     |
+| ----------------- | ---------------- | -------------------------- |
+| serch by category | category         | images under that category |
+| serch by location | location         | images under that category |
+| Copy Image link   | click bitton     | link copied                |
+
+
 ## Setup and installations
 
 #### Prerequisites
