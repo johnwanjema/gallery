@@ -45,14 +45,15 @@ class Image(models.Model):
     
 
     @classmethod
-    def update_image(cls):
-        pass
+    def update_image_by_id(cls,id):
+        image = cls.objects.update(id=id)
+        return image
 
     
     @classmethod
     def get_image_by_id(cls,id):
-        image_id = cls.objects.filter(pk = id)
-        return image_id
+        image = cls.objects.filter(id=id)
+        return image
 
     @classmethod
     def search_image_by_category(cls,search_term):
