@@ -9,6 +9,11 @@ class Category(models.Model):
     def save_category(self):
         self.save()
 
+    @classmethod
+    def update_category(cls,id):
+        category = cls.objects.update(id=id)
+        return category
+
     def __str__(self):
         return self.name
 
@@ -18,6 +23,11 @@ class Location(models.Model):
 
     def save_location(self):
         self.save()
+
+    @classmethod
+    def update_location(cls,id):
+        location = cls.objects.update(id=id)
+        return location
 
     def __str__(self):
         return self.name
