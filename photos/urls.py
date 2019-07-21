@@ -9,6 +9,7 @@ urlpatterns=[
     url(r'^nairobi/', views.nairobi, name='nairobi'),
     url(r'^rio/', views.rio, name='rio'),
     url(r'^tokyo/', views.tokyo, name='tokyo'),
+    url(r'^berlin/', views.berlin, name='berlin'),
 ]
 
 if settings.DEBUG:
