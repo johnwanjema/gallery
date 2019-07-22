@@ -12,6 +12,12 @@ class LocationTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.Nairobi,Location))
 
+    def test_delete_location(self):
+        self.Nairobi.save_location()
+        self.Nairobi.delete_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location)==0)
+
     def test_save_method(self):
         self.Nairobi.save_location()
         locations = Location.objects.all()
@@ -33,6 +39,19 @@ class CategoryTestClass(TestCase):
         self.Camera.save_category()
         categorys = Category.objects.all()
         self.assertTrue(len(categorys) > 0)
+
+    def test_delete_category(self):
+        self.Camera.save_category()
+        self.Camera.delete_category()
+        categorys = Category.objects.all()
+        self.assertTrue(len(categorys)==0)
+
+    def test_update_category(self):
+        new_category_name = 'Food'
+        self.Camera.update_category(self.Camera.id,new_category_name)
+        updated_category = Category.objects.filter(name='Food')
+        self.updated_category.save_category()
+        self.assertTrue(len(updated_category)>0)
 
 class ImageTestClass(TestCase):
 
