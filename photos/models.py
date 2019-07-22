@@ -36,7 +36,7 @@ class Location(models.Model):
 class Image(models.Model):
     name = models.CharField(max_length=50)
     photo = models.ImageField(upload_to='photos')
-    description = models.CharField(max_length=50)
+    description = models.CharField(max_length=2000)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     location = models.ForeignKey(
         Location, on_delete=models.CASCADE, default='LOCATION')
@@ -77,6 +77,8 @@ class Image(models.Model):
 
     @classmethod
     def filter_by_location(cls):
+
+        
         pass
 
    
