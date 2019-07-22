@@ -1,4 +1,64 @@
-h1
-{
+/* h1 {
   color: green;
+} */
+
+
+
+@media only screen and (min-width:685px) and (max-width:1025px) {
+  body {
+    background-color: blue;
+  }
+  .navbar-toggler{
+    height: 100px;
+  }
+  nav {
+    /* height: 200px; */
+    font-size: 45px;
+  }
+  .row{
+    justify-content: center;
+    display: block;
+    top: 40%;
+  }
+  .card {
+    width: 400px;
+    padding-top: 40px; 
+    background-color: transparent; 
+  }
+  .form-control{
+    font-size: 50px;
+    background-color: greenyellow;
+  }
+  .card-img-top{
+    height: 500px;
+    width: 400px;
+  }
+  p{
+    font-size: 100px;
+  }
+  .navbar-toggler{
+    height: 123px;
+    /* size:px; */
+  }
+  h5{
+    font-size: 100px;
+  }
+  .btn{
+    font-size: 20px;
+  }
+  .col-md-4{
+    justify-content: center;
+  }
+  .modal{
+    padding-top: 100px;
+    
+  }
+}
+
+@media only screen and (min-width:1024px) {
+  body {
+    /* background-color: brown; */
+  }
+
+
 }
