@@ -5,9 +5,9 @@
 
 
 @media only screen and (min-width:685px) and (max-width:1025px) {
-  body {
+  /* body {
     background-color: blue;
-  }
+  } */
   .navbar-toggler{
     height: 100px;
   }
@@ -56,9 +56,9 @@
 }
 
 @media only screen and (min-width:1024px) {
-  body {
-    /* background-color: brown; */
-  }
+  /* body {
+    /* background-color: brown; 
+  } */
 
 
 }
